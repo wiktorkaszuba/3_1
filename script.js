@@ -16,7 +16,6 @@
       const result = await response.json();
       if (result.data.meta.count != 0) {
         const objects = result.data.objects;
-        console.log(objects);
         let html = `<table border='1'>
         <tr> 
           <th>Name</th>
@@ -38,7 +37,6 @@
           `;
         });
         html += `</table>`;
-        console.log(html);
         res.innerHTML = html;
       } else {
         res.innerHTML = "BRAK WYNIKÓW";
